@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ростовский дельфинарий — Встреча с дельфинами, которую запомнит вся семья</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%23041030'/%3E%3Ccircle cx='24' cy='24' r='21' fill='none' stroke='%23C5D632' stroke-width='2'/%3E%3Cpath d='M9.5 28.4c7.8-10.7 17.7-14.9 29-12.5-4.7.6-8.7 2.4-12 5.4 5.1-.6 9.1.7 12 4-7.3-2.1-13.7-1.2-19.1 2.6-3.3 2.4-6.6 2.5-9.9.5Z' fill='%23C5D632'/%3E%3Cpath d='M24.8 20.8c-.4 4.9-2.3 8.7-5.7 11.5 1.1-4.2.7-7.9-1.4-11.1' stroke='%23C5D632' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <button class="side-btn" id="gridBtn" aria-label="Открыть меню">
+      <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="7" cy="7" r="1.5"/><circle cx="12" cy="7" r="1.5"/><circle cx="17" cy="7" r="1.5"/><circle cx="7" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="17" cy="12" r="1.5"/><circle cx="7" cy="17" r="1.5"/><circle cx="12" cy="17" r="1.5"/><circle cx="17" cy="17" r="1.5"/></svg>
+    </button>
+
+    <div class="side-nav">
+      <span class="side-index" id="sideIndex">01</span>
+      <button class="side-arrow" id="arrowUp" aria-label="Прокрутить вверх">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m7 14 5-5 5 5"/></svg>
+      </button>
+      <button class="side-arrow" id="arrowDown" aria-label="Прокрутить вниз">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg>
+      </button>
+    </div>
+
+    <div class="side-footer">
+      <span class="side-location" id="sideLocation">РОСТОВ-НА-ДОНУ · ПАРК «СКАЗКА», КОММУНИСТИЧЕСКИЙ ПР-Т 36/4</span>
+      <span class="side-dot"></span>
+    </div>
+  </aside>
+
+  <header class="header">
+    <a href="#/" class="logo">
+      <span class="logo-icon">
+        <svg viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="22.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M9.5 28.4c7.8-10.7 17.7-14.9 29-12.5-4.7.6-8.7 2.4-12 5.4 5.1-.6 9.1.7 12 4-7.3-2.1-13.7-1.2-19.1 2.6-3.3 2.4-6.6 2.5-9.9.5Z" fill="currentColor"/>
+          <path d="M24.8 20.8c-.4 4.9-2.3 8.7-5.7 11.5 1.1-4.2.7-7.9-1.4-11.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="logo-text">
+        <span class="logo-text__top">РОСТОВСКИЙ</span>
+        <span class="logo-text__bottom">ДЕЛЬФИНАРИЙ</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="primaryNav">
+      <a href="#section-schedule" class="nav__link">АФИША И БИЛЕТЫ</a>
+      <a href="#show" class="nav__link">ШОУ</a>
+      <a href="#section-programs" class="nav__link">ПРОГРАММЫ</a>
+      <a href="#artists" class="nav__link">АРТИСТЫ</a>
+      <a href="#section-plan-visit" class="nav__link">ПОСЕТИТЕЛЯМ</a>
+      <a href="#section-contacts" class="nav__link">КОНТАКТЫ</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="btn btn--ticket" data-cta>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"><path d="M4 7.5A1.5 1.5 0 0 1 5.5 6h13A1.5 1.5 0 0 1 20 7.5v2a2.5 2.5 0 0 0 0 5v2A1.5 1.5 0 0 1 18.5 18h-13A1.5 1.5 0 0 1 4 16.5v-2a2.5 2.5 0 0 0 0-5v-2Z"/><path d="M12 8.5v7" stroke-dasharray="2 2"/></svg>
+        <span>КУПИТЬ БИЛЕТ</span>
+      </button>
+      <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8h16M8 16h12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-overlay__top">
+      <span class="logo-text">
+        <span class="logo-text__top">РОСТОВСКИЙ</span>
+        <span class="logo-text__bottom">ДЕЛЬФИНАРИЙ</span>
+      </span>
+      <button class="menu-overlay__close" id="menuCloseBtn" aria-label="Закрыть меню">&times;</button>
+    </div>
+    <nav class="menu-overlay__nav">
+      <a href="#section-schedule" class="menu-link">АФИША И БИЛЕТЫ</a>
+      <a href="#show" class="menu-link">ШОУ</a>
+      <a href="#section-programs" class="menu-link">ПРОГРАММЫ</a>
+      <a href="#artists" class="menu-link">АРТИСТЫ</a>
+      <a href="#section-plan-visit" class="menu-link">ПОСЕТИТЕЛЯМ</a>
+      <a href="#section-contacts" class="menu-link">КОНТАКТЫ</a>
+    </nav>
+    <div class="menu-overlay__foot">
+      <button class="btn btn--ticket" style="align-self:flex-start;" data-cta>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"><path d="M4 7.5A1.5 1.5 0 0 1 5.5 6h13A1.5 1.5 0 0 1 20 7.5v2a2.5 2.5 0 0 0 0 5v2A1.5 1.5 0 0 1 18.5 18h-13A1.5 1.5 0 0 1 4 16.5v-2a2.5 2.5 0 0 0 0-5v-2Z"/><path d="M12 8.5v7" stroke-dasharray="2 2"/></svg>
+        <span>КУПИТЬ БИЛЕТ</span>
+      </button>
+      <span class="menu-overlay__address">
+        <span class="side-dot"></span> КОММУНИСТИЧЕСКИЙ ПР-Т 36/4
+      </span>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="megaMenu" aria-hidden="true">
+    <div class="mega-menu__surface" id="megaMenuSurface">
+      <div class="mega-menu__content" id="megaMenuContent">
+        <div class="mega-menu__head">
+          <a href="#/" class="logo">
+            <span class="logo-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="22.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M9.5 28.4c7.8-10.7 17.7-14.9 29-12.5-4.7.6-8.7 2.4-12 5.4 5.1-.6 9.1.7 12 4-7.3-2.1-13.7-1.2-19.1 2.6-3.3 2.4-6.6 2.5-9.9.5Z" fill="currentColor"/>
+                <path d="M24.8 20.8c-.4 4.9-2.3 8.7-5.7 11.5 1.1-4.2.7-7.9-1.4-11.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="logo-text">
+              <span class="logo-text__top">РОСТОВСКИЙ</span>
+              <span class="logo-text__bottom">ДЕЛЬФИНАРИЙ</span>
+            </span>
+          </a>
+          <button type="button" class="mega-menu__close" id="megaMenuClose" aria-label="Закрыть меню">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+
+        <div class="mega-menu__body">
+          <nav class="mega-menu__nav">
+            <p class="mega-menu__label">МЕНЮ</p>
+            <a href="#section-schedule">Афиша и билеты</a>
+            <a href="#show">Шоу</a>
+            <a href="#section-programs">Программы</a>
+            <a href="#artists">Артисты</a>
+            <a href="#section-plan-visit">Посетителям</a>
+            <a href="#section-contacts">Контакты</a>
+          </nav>
+
+          <div class="mega-menu__contacts">
+            <p class="mega-menu__label">СВЯЗАТЬСЯ С НАМИ</p>
+            <a class="mega-menu__phone" href="tel:+79282706869">
+              <span class="mega-menu__phone-label">КАССА И ГРУППОВЫЕ ЗАЯВКИ</span>
+              <span class="mega-menu__phone-value">+7 (928) 270-68-69</span>
+              <span class="mega-menu__phone-note">11:00–18:00 · понедельник — выходной</span>
+            </a>
+            <a class="mega-menu__phone" href="tel:+79281257904">
+              <span class="mega-menu__phone-label">ПЛАВАНИЕ С ДЕЛЬФИНАМИ</span>
+              <span class="mega-menu__phone-value">+7 (928) 125-79-04</span>
+              <span class="mega-menu__phone-note">11:00–19:00 · понедельник — выходной</span>
+            </a>
+            <a class="mega-menu__address-link" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener">
+              <span>Ростов-на-Дону, Коммунистический просп., 36/4</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <a class="mega-menu__map" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener" aria-label="Открыть карту">
+            <svg class="pv-map__roads" viewBox="0 0 620 520" fill="none" preserveAspectRatio="xMidYMid slice">
+            <path d="M60 0 C90 90 20 150 60 230 S140 340 110 520" stroke="currentColor" stroke-width="2"/>
+            <path d="M320 0 C300 70 360 130 320 220 S260 340 300 520" stroke="currentColor" stroke-width="2"/>
+            <path d="M0 90 C110 60 180 120 280 95 S480 60 620 110" stroke="currentColor" stroke-width="2"/>
+            <path d="M0 210 C120 190 200 230 310 205 S470 175 620 215" stroke="currentColor" stroke-width="2"/>
+            <path d="M540 0 C520 90 580 150 540 240 S470 350 520 520" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          <span class="pv-map__pin-dot" aria-hidden="true"></span>
+          <svg class="pv-map__pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/></svg>
+          <span class="pv-map__label">Парк «Сказка»</span>
+        </a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" id="section-hero" data-section data-index="01" data-sidebar="light" data-label="РОСТОВ-НА-ДОНУ · ПАРК «СКАЗКА», КОММУНИСТИЧЕСКИЙ ПР-Т 36/4">
+      <picture class="hero__media">
+        <source media="(max-width:760px)" srcset="media/hero-dolphins-mobile.jpg">
+        <img src="media/hero-dolphins.jpg" alt="Два дельфина плывут в глубокой синей воде, освещённой лучами сверху" loading="eager">
+      </picture>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow">ШОУ КРУГЛЫЙ ГОД</p>
+        <h1 class="hero__title">Встреча с дельфинами,<br>которую запомнит<br>вся&nbsp;семья</h1>
+        <p class="hero__desc">Яркое шоу, плавание с дельфинами и познавательные программы<br>в <span class="nowrap">Ростове-на-Дону.</span></p>
+        <div class="hero__actions">
+          <button class="btn btn--cta" data-cta>
+            <span>КУПИТЬ БИЛЕТ</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(90deg)"><path d="m7 14 5-5 5 5"/></svg>
+          </button>
+          <button class="btn btn--ghost" data-schedule>
+            <span class="schedule-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5.5" width="16" height="14.5" rx="2.5"/><path d="M4 10.2h16"/><path d="M8 3.5v3.4M16 3.5v3.4"/></svg>
+            </span>
+            <span>СМОТРЕТЬ РАСПИСАНИЕ</span>
+          </button>
+          <a class="btn btn--ghost" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener">
+            <span class="schedule-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="19" r="2"/><circle cx="19" cy="5" r="2"/><path d="M7 17.5C10 14 8 10 12 9s2-5 5-4" stroke-dasharray="2.4 2.4"/></svg>
+            </span>
+            <span>ПРОЛОЖИТЬ МАРШРУТ</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule" id="section-schedule" data-section data-index="02" data-sidebar="light" data-label="РАСПИСАНИЕ · ВЫБОР МЕСТ">
+
+      <div class="schedule__head">
+        <div>
+          <p class="eyebrow-blue">БЛИЖАЙШИЕ ПРЕДСТАВЛЕНИЯ</p>
+          <h2 class="schedule__title">Расписание и выбор&nbsp;мест</h2>
+          <p class="schedule__subtitle">Выберите дату и время, затем отметьте места на схеме зала</p>
+        </div>
+        <div class="ticket-info-card">
+          <div>
+            <p class="ticket-info__label">БИЛЕТ</p>
+            <p class="ticket-info__value">1 600 ₽</p>
+          </div>
+          <div>
+            <p class="ticket-info__label">ДЛИТЕЛЬНОСТЬ</p>
+            <p class="ticket-info__value">≈ 45 минут</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="date-row">
+        <div class="date-tabs" id="dateTabs">
+          <button class="date-tab is-active" data-date data-day="8 августа" data-time="СБ · 12:00">
+            <span class="date-tab__label">БЛИЖАЙШЕЕ</span>
+            <span class="date-tab__date">8 августа</span>
+            <span class="date-tab__time">СБ · 12:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="8 августа" data-time="18:00">
+            <span class="date-tab__label">СУББОТА</span>
+            <span class="date-tab__date">8 августа</span>
+            <span class="date-tab__time">18:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="9 августа" data-time="12:00">
+            <span class="date-tab__label">ВОСКРЕСЕНЬЕ</span>
+            <span class="date-tab__date">9 августа</span>
+            <span class="date-tab__time">12:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="9 августа" data-time="16:00">
+            <span class="date-tab__label">ВОСКРЕСЕНЬЕ</span>
+            <span class="date-tab__date">9 августа</span>
+            <span class="date-tab__time">16:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="11 августа" data-time="12:00">
+            <span class="date-tab__label">ВТОРНИК</span>
+            <span class="date-tab__date">11 августа</span>
+            <span class="date-tab__time">12:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="12 августа" data-time="12:00">
+            <span class="date-tab__label">СРЕДА</span>
+            <span class="date-tab__date">12 августа</span>
+            <span class="date-tab__time">12:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="13 августа" data-time="12:00">
+            <span class="date-tab__label">ЧЕТВЕРГ</span>
+            <span class="date-tab__date">13 августа</span>
+            <span class="date-tab__time">12:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="14 августа" data-time="12:00">
+            <span class="date-tab__label">ПЯТНИЦА</span>
+            <span class="date-tab__date">14 августа</span>
+            <span class="date-tab__time">12:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="15 августа" data-time="12:00">
+            <span class="date-tab__label">СУББОТА</span>
+            <span class="date-tab__date">15 августа</span>
+            <span class="date-tab__time">12:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="15 августа" data-time="18:00">
+            <span class="date-tab__label">СУББОТА</span>
+            <span class="date-tab__date">15 августа</span>
+            <span class="date-tab__time">18:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="16 августа" data-time="12:00">
+            <span class="date-tab__label">ВОСКРЕСЕНЬЕ</span>
+            <span class="date-tab__date">16 августа</span>
+            <span class="date-tab__time">12:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="16 августа" data-time="16:00">
+            <span class="date-tab__label">ВОСКРЕСЕНЬЕ</span>
+            <span class="date-tab__date">16 августа</span>
+            <span class="date-tab__time">16:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="18 августа" data-time="12:00">
+            <span class="date-tab__label">ВТОРНИК</span>
+            <span class="date-tab__date">18 августа</span>
+            <span class="date-tab__time">12:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="19 августа" data-time="12:00">
+            <span class="date-tab__label">СРЕДА</span>
+            <span class="date-tab__date">19 августа</span>
+            <span class="date-tab__time">12:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="20 августа" data-time="12:00">
+            <span class="date-tab__label">ЧЕТВЕРГ</span>
+            <span class="date-tab__date">20 августа</span>
+            <span class="date-tab__time">12:00</span>
+          </button>
+          <button class="date-tab" data-date data-day="21 августа" data-time="12:00">
+            <span class="date-tab__label">ПЯТНИЦА</span>
+            <span class="date-tab__date">21 августа</span>
+            <span class="date-tab__time">12:00</span>
+          </button>
+        </div>
+        <button class="date-next" id="dateNext" aria-label="Другие даты">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+      </div>
+
+      <div class="schedule__body">
+        <div class="seat-card">
+          <div class="seat-card__head">
+            <div>
+              <h3>Выберите&nbsp;места</h3>
+              <p>Нажмите на трибуну, чтобы выбрать места</p>
+            </div>
+          </div>
+          <p class="seat-card__note">Дети до 3 лет — бесплатно, без отдельного места</p>
+
+          <div class="plan2">
+            <div class="plan2__top">
+              <button type="button" class="plan2-zone" data-open-tribune="1">
+                <span class="plan2-zone__label">ТРИБУНА&nbsp;1</span>
+                <span class="plan2-zone__hint">Выбрать места</span>
+              </button>
+              <button type="button" class="plan2-zone" data-open-tribune="2">
+                <span class="plan2-zone__label">ТРИБУНА&nbsp;2</span>
+                <span class="plan2-zone__hint">Выбрать места</span>
+              </button>
+            </div>
+
+            <button type="button" class="plan2-zone plan2-zone--trib4" data-open-tribune="4">
+              <span class="plan2-zone__label">ТРИБУНА&nbsp;4</span>
+              <span class="plan2-zone__hint">Выбрать места</span>
+            </button>
+
+            <div class="plan2__pool">
+              <span class="pool__label">БАССЕЙН</span>
+              <span class="pool__sub">схема условная</span>
+            </div>
+
+            <div class="plan2__stage">
+              <span>СЦЕНА</span>
+            </div>
+
+            <button type="button" class="plan2-zone plan2-zone--trib3" data-open-tribune="3">
+              <span class="plan2-zone__label">ТРИБУНА&nbsp;3</span>
+              <span class="plan2-zone__hint">Выбрать места</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="tribune-modal" id="tribuneModal" aria-hidden="true">
+          <div class="tribune-modal__backdrop" id="tribuneModalBackdrop"></div>
+          <div class="tribune-modal__panel">
+            <div class="tribune-modal__head">
+              <div>
+                <p class="tribune-modal__eyebrow">ВЫБОР МЕСТ</p>
+                <h4 class="tribune-modal__title" id="tribuneModalTitle">Трибуна 1</h4>
+              </div>
+              <button type="button" class="tribune-modal__close" id="tribuneModalClose" aria-label="Закрыть">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+              </button>
+            </div>
+            <div class="legend">
+              <span class="legend__item"><i class="swatch swatch--free"></i>Свободно</span>
+              <span class="legend__item"><i class="swatch swatch--selected"></i>Выбрано</span>
+              <span class="legend__item"><i class="swatch swatch--disabled"></i>Недоступно</span>
+            </div>
+            <div class="tribune-modal__body" id="tribuneModalSeats"></div>
+            <div class="tribune-modal__foot">
+              <button type="button" class="btn btn--cta" id="tribuneModalDone">
+                <span>ГОТОВО</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tribune-modal" id="discountModal" aria-hidden="true">
+          <div class="tribune-modal__backdrop" id="discountModalBackdrop"></div>
+          <div class="tribune-modal__panel">
+            <div class="tribune-modal__head">
+              <div>
+                <p class="tribune-modal__eyebrow">ЛЬГОТНЫЙ БИЛЕТ</p>
+                <h4 class="tribune-modal__title">Какие документы подойдут</h4>
+              </div>
+              <button type="button" class="tribune-modal__close" id="discountModalClose" aria-label="Закрыть">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+              </button>
+            </div>
+            <ul class="discount-list">
+              <li>Удостоверение многодетной семьи</li>
+              <li>Справка об инвалидности I, II или III группы</li>
+              <li>Пенсионное удостоверение</li>
+              <li>Студенческий билет очной формы обучения</li>
+              <li>Удостоверение ветерана или участника боевых действий</li>
+            </ul>
+            <p class="discount-list__note">Оригинал или копию документа нужно предъявить на кассе вместе с билетом.</p>
+            <div class="tribune-modal__foot">
+              <button type="button" class="btn btn--cta" id="discountModalClose2">
+                <span>ПОНЯТНО</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tribune-modal" id="paymentModal" aria-hidden="true">
+          <div class="tribune-modal__backdrop" id="paymentModalBackdrop"></div>
+          <div class="tribune-modal__panel payment-modal__panel">
+            <div class="tribune-modal__head">
+              <div>
+                <p class="tribune-modal__eyebrow">ОПЛАТА ЗАКАЗА</p>
+                <h4 class="tribune-modal__title">К оплате <span id="paymentAmount">0 ₽</span></h4>
+              </div>
+              <button type="button" class="tribune-modal__close" id="paymentModalClose" aria-label="Закрыть">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+              </button>
+            </div>
+
+            <div id="paymentFormView">
+              <div class="payment-field">
+                <span class="payment-field__label">НОМЕР КАРТЫ</span>
+                <div class="payment-field__wrap">
+                  <input type="text" inputmode="numeric" autocomplete="cc-number" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19">
+                  <svg class="payment-field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 9.5h19"/></svg>
+                </div>
+              </div>
+              <div class="payment-row">
+                <div class="payment-field">
+                  <span class="payment-field__label">СРОК ДЕЙСТВИЯ</span>
+                  <input type="text" inputmode="numeric" autocomplete="cc-exp" id="cardExpiry" placeholder="ММ/ГГ" maxlength="5">
+                </div>
+                <div class="payment-field">
+                  <span class="payment-field__label">CVV</span>
+                  <input type="password" inputmode="numeric" autocomplete="cc-csc" id="cardCvv" placeholder="000" maxlength="3">
+                </div>
+              </div>
+
+              <button type="button" class="btn btn--cta payment-pay-btn" id="payByCard">
+                <span>ОПЛАТИТЬ</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </button>
+
+              <div class="payment-divider"><span>или</span></div>
+
+              <button type="button" class="payment-sbp-btn" id="payBySbp">
+                <span class="sbp-badge">
+                  <svg viewBox="0 0 28 28" width="26" height="26" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path fill="#fff" d="M0 0h28v28H0z"/>
+                    <path fill="#5B57A2" d="m6.609 8.852 2.208 3.947v2.407l-2.206 3.94z"/>
+                    <path fill="#D90751" d="m15.087 11.363 2.07-1.268 4.234-.005-6.304 3.862z"/>
+                    <path fill="#FAB718" d="m15.075 8.829.012 5.225-2.213-1.36v-7.81z"/>
+                    <path fill="#ED6F26" d="m21.39 10.09-4.234.005-2.08-1.266-2.202-3.946z"/>
+                    <path fill="#63B22F" d="M15.087 19.167v-2.535l-2.213-1.334v7.819z"/>
+                    <path fill="#1487C9" d="M17.151 17.91 8.817 12.8 6.609 8.852l14.773 9.054z"/>
+                    <path fill="#017F36" d="m12.875 23.117 2.212-3.95 2.064-1.256 4.23-.006z"/>
+                    <path fill="#984995" d="m6.611 19.145 6.281-3.847-2.111-1.296-1.964 1.204z"/>
+                  </svg>
+                </span>
+                <span>Оплатить по СБП</span>
+              </button>
+              <p class="payment-note">Для оплаты по СБП банковская карта не нужна — оплата пройдёт через приложение вашего банка.</p>
+            </div>
+
+            <div class="payment-success" id="paymentSuccessView" hidden>
+              <div class="payment-success__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L19 8"/></svg>
+              </div>
+              <h4>Оплата прошла успешно</h4>
+              <p>Спасибо за заказ! Демонстрационная форма — реальное списание средств не выполнялось.</p>
+              <button type="button" class="btn btn--cta" id="paymentDoneBtn">
+                <span>ГОТОВО</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="order-card">
+          <p class="order-card__label">ВАШ ЗАКАЗ</p>
+          <h3 class="order-card__datetime" id="orderDatetime">8 августа · 12:00</h3>
+          <div class="order-card__divider"></div>
+          <div class="order-card__row">
+            <p class="order-card__field-label">Представление</p>
+            <p class="order-card__field-value">Шоу с морскими животными</p>
+          </div>
+          <div class="order-card__row">
+            <p class="order-card__field-label">Выбранные места</p>
+            <p class="order-card__field-value" id="orderSeats">Места не выбраны</p>
+          </div>
+          <div class="order-card__row">
+            <p class="order-card__field-label">Билеты</p>
+            <p class="order-card__field-value" id="orderTickets">0 × 1 600 ₽</p>
+          </div>
+          <div class="order-card__divider"></div>
+          <div class="order-card__total">
+            <span>ИТОГО</span>
+            <span id="orderTotal">0 ₽</span>
+          </div>
+          <div class="order-card__discount">
+            <span class="order-card__discount-label">Льготные билеты<span class="order-card__discount-price">1 300 ₽/чел. вместо 1 600 ₽</span></span>
+            <span class="order-card__stepper">
+              <button type="button" class="order-card__stepper-btn" id="discountMinus" aria-label="Меньше льготных билетов">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/></svg>
+              </button>
+              <span class="order-card__stepper-count" id="discountCount">0</span>
+              <button type="button" class="order-card__stepper-btn" id="discountPlus" aria-label="Больше льготных билетов">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </span>
+          </div>
+          <p class="order-card__discount-note" id="discountNote" hidden>
+            Вместе с билетами потребуются <button type="button" class="order-card__discount-link" id="discountDocsLink">подтверждающие документы</button>
+          </p>
+          <button class="btn btn--cta order-card__cta" id="checkoutBtn">
+            <span>ОФОРМИТЬ БИЛЕТЫ</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+          </button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="conditions" id="section-conditions" data-section data-index="03" data-sidebar="light" data-label="УСЛОВИЯ ПОСЕЩЕНИЯ">
+
+      <div class="conditions__head">
+        <p class="eyebrow-blue">ПЕРЕД ВИЗИТОМ</p>
+        <h2 class="conditions__title">Условия посещения</h2>
+        <p class="conditions__subtitle">Выберите программу — для каждой действуют свои правила, возрастные ограничения, продолжительность и стоимость.</p>
+      </div>
+
+      <div class="cond-tabs" id="condTabs" role="tablist">
+        <button class="cond-tab is-active" data-cond-tab="show" role="tab" aria-selected="true">ПРЕДСТАВЛЕНИЕ</button>
+        <button class="cond-tab" data-cond-tab="junior" role="tab" aria-selected="false">ЮНЫЙ НАТУРАЛИСТ</button>
+        <button class="cond-tab" data-cond-tab="swim" role="tab" aria-selected="false">ПЛАВАНИЕ С ДЕЛЬФИНАМИ</button>
+      </div>
+
+      <div class="cond-card">
+        <div class="cond-panel is-active" data-cond-panel="show">
+          <div>
+            <p class="cond-main__label">ПРЕДСТАВЛЕНИЕ</p>
+            <h3 class="cond-main__title">Шоу с морскими&nbsp;животными</h3>
+            <p class="cond-main__desc">Дельфины и другие артисты показывают трюки, играют с тренерами и знакомят гостей с океаном.</p>
+          </div>
+          <div class="cond-col">
+            <div class="cond-field">
+              <p class="cond-field__label">СТОИМОСТЬ</p>
+              <p class="cond-field__value">1 600 ₽</p>
+              <p class="cond-field__note">Один билет — одно место в зрительном зале.</p>
+            </div>
+            <div class="cond-field">
+              <p class="cond-field__label">ЛЬГОТНЫЙ БИЛЕТ</p>
+              <p class="cond-field__value">1 300 ₽</p>
+              <p class="cond-field__note">При наличии документа</p>
+            </div>
+          </div>
+          <div class="cond-col">
+            <div class="cond-field">
+              <p class="cond-field__label">ПРОДОЛЖИТЕЛЬНОСТЬ</p>
+              <p class="cond-field__value">≈ 45 минут</p>
+              <p class="cond-field__note">Приезжайте за 15 минут до начала программы.</p>
+            </div>
+            <div class="cond-field">
+              <p class="cond-field__label">ДЕТИ ДО 3 ЛЕТ</p>
+              <p class="cond-field__value">Бесплатно</p>
+              <p class="cond-field__note">Без отдельного места</p>
+            </div>
+          </div>
+          <div class="cond-panel__foot">
+            <a href="#section-schedule" class="btn btn--cta">
+              <span>К РАСПИСАНИЮ</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="cond-panel" data-cond-panel="junior">
+          <div>
+            <p class="cond-main__label">ЮНЫЙ НАТУРАЛИСТ</p>
+            <h3 class="cond-main__title">«Юный натуралист»</h3>
+            <p class="cond-main__desc">Экскурсия за кулисы: дети узнают, как ухаживают за дельфинами, и знакомятся с ними у бортика бассейна.</p>
+          </div>
+          <div class="cond-col">
+            <div class="cond-field">
+              <p class="cond-field__label">СТОИМОСТЬ</p>
+              <p class="cond-field__value">1 200 ₽</p>
+              <p class="cond-field__note">Один билет — один участник программы.</p>
+            </div>
+            <div class="cond-field">
+              <p class="cond-field__label">ЛЬГОТНЫЙ БИЛЕТ</p>
+              <p class="cond-field__value">1 000 ₽</p>
+              <p class="cond-field__note">При наличии документа</p>
+            </div>
+          </div>
+          <div class="cond-col">
+            <div class="cond-field">
+              <p class="cond-field__label">ПРОДОЛЖИТЕЛЬНОСТЬ</p>
+              <p class="cond-field__value">≈ 30–35 минут</p>
+              <p class="cond-field__note">Приезжайте за 10 минут до начала программы.</p>
+            </div>
+            <div class="cond-field">
+              <p class="cond-field__label">ВОЗРАСТ УЧАСТНИКОВ</p>
+              <p class="cond-field__value">От 5 лет</p>
+              <p class="cond-field__note">Младше — только рядом с родителем</p>
+            </div>
+          </div>
+          <div class="cond-panel__foot">
+            <a href="#section-schedule" class="btn btn--cta">
+              <span>ЗАБРОНИРОВАТЬ</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="cond-panel" data-cond-panel="swim">
+          <div>
+            <p class="cond-main__label">ПЛАВАНИЕ С ДЕЛЬФИНАМИ</p>
+            <h3 class="cond-main__title">Плавание с&nbsp;дельфинами</h3>
+            <p class="cond-main__desc">Инструктор сопровождает в воде: можно поплавать рядом с дельфином и сделать фото на память.</p>
+          </div>
+          <div class="cond-col">
+            <div class="cond-field">
+              <p class="cond-field__label">СТОИМОСТЬ</p>
+              <p class="cond-field__value">5 500 ₽</p>
+              <p class="cond-field__note">Один билет — одно занятие в бассейне.</p>
+            </div>
+            <div class="cond-field">
+              <p class="cond-field__label">ЛЬГОТНЫЙ БИЛЕТ</p>
+              <p class="cond-field__value">—</p>
+              <p class="cond-field__note">Скидки на это занятие не действуют</p>
+            </div>
+          </div>
+          <div class="cond-col">
+            <div class="cond-field">
+              <p class="cond-field__label">ПРОДОЛЖИТЕЛЬНОСТЬ</p>
+              <p class="cond-field__value">≈ 15 минут</p>
+              <p class="cond-field__note">Приезжайте за 20 минут — переодевание и инструктаж.</p>
+            </div>
+            <div class="cond-field">
+              <p class="cond-field__label">ВОЗРАСТ УЧАСТНИКОВ</p>
+              <p class="cond-field__value">От 8 лет</p>
+              <p class="cond-field__note">Умение плавать не обязательно</p>
+            </div>
+          </div>
+          <div class="cond-panel__foot">
+            <a href="#section-schedule" class="btn btn--cta">
+              <span>ЗАБРОНИРОВАТЬ</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs" id="section-programs" data-section data-index="04" data-sidebar="dark" data-label="ПРОГРАММЫ">
+      <div class="programs__blob" aria-hidden="true"></div>
+
+      <p class="eyebrow-cyan">ВЫБЕРИТЕ СВОЙ ФОРМАТ</p>
+      <h2 class="programs__title">Программы дельфинария</h2>
+      <p class="programs__subtitle">Шоу, знакомство с артистами или личная встреча в воде — а если не знаете точную дату, оформите сертификат в&nbsp;подарок.</p>
+
+      <div class="programs-grid">
+        <button type="button" class="program-card program-card--photo program-card--big" data-open-program="show">
+          <span class="program-badge">ПОПУЛЯРНО</span>
+          <picture>
+            <img src="media/show.jpg" alt="Фотография программы Ростовского дельфинария" loading="lazy">
+          </picture>
+          <span class="program-card__body">
+            <span>
+              <span class="program-card__label">ШОУ С МОРСКИМИ ЖИВОТНЫМИ</span>
+              <span class="program-card__title">Представление</span>
+            </span>
+            <span class="program-card__corner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </span>
+        </button>
+
+        <div class="programs-col-mid">
+          <button type="button" class="program-card program-card--photo" data-open-program="swim">
+            <picture>
+              <img src="media/swim.jpg" alt="Фотография программы Ростовского дельфинария" loading="lazy">
+            </picture>
+            <span class="program-card__body">
+              <span>
+                <span class="program-card__label">15 МИНУТ В БАССЕЙНЕ</span>
+                <span class="program-card__title">Плавание с дельфинами</span>
+              </span>
+              <span class="program-card__corner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </span>
+            </span>
+          </button>
+
+          <a href="#section-schedule" class="program-card program-card--accent">
+            <span class="program-card--accent__top">
+              <span class="program-card--accent__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18v11H3zM2 6h20v4H2zM12 6v15"/><path d="M12 6c-5 0-5-5-2-5 2 0 2 3 2 5Zm0 0c5 0 5-5 2-5-2 0-2 3-2 5Z"/></svg>
+              </span>
+              <span class="program-card--accent__go">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </span>
+            </span>
+            <span>
+              <span class="program-card--accent__label">ПОДАРОК С ОТКРЫТОЙ ДАТОЙ</span>
+              <span class="program-card--accent__title">Подарочный сертификат</span>
+              <span class="program-card--accent__price">8 000 ₽ · действует 1 месяц</span>
+            </span>
+          </a>
+        </div>
+
+        <div class="programs-col-end">
+          <button type="button" class="program-card program-card--photo program-card--tall" data-open-program="junior">
+            <picture>
+              <img src="media/junior.jpg" alt="Фотография программы Ростовского дельфинария" loading="lazy">
+            </picture>
+            <span class="program-card__body">
+              <span>
+                <span class="program-card__label">30–35 МИНУТ</span>
+                <span class="program-card__title">«Юный натуралист»</span>
+              </span>
+              <span class="program-card__corner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="tribune-modal" id="programModalShow" aria-hidden="true">
+      <div class="tribune-modal__backdrop" data-program-close></div>
+      <div class="tribune-modal__panel program-modal__panel">
+        <div class="program-modal__photo">
+          <img src="media/show.jpg" alt="Дельфины во время представления Ростовского дельфинария" loading="lazy">
+          <button type="button" class="program-modal__close" data-program-close aria-label="Закрыть">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+        <div class="program-modal__body">
+          <p class="program-modal__label">ШОУ С МОРСКИМИ ЖИВОТНЫМИ</p>
+          <h4 class="program-modal__title">Представление</h4>
+          <p class="program-modal__desc">Приглашаем вас посетить незабываемое представление с участием талантливых морских артистов Ростовского дельфинария! Игривые дельфины-афалины и южные морские котики вместе с их тренерами развеселят и удивят вас интересными номерами и зрелищными трюками. И взрослые, и дети получат ни с чем несравнимое удовольствие от общения с удивительными морскими животными — мы работаем круглый год.</p>
+          <div class="program-modal__phone">
+            <div>
+              <p class="program-modal__phone-label">КАССА, ПРИЁМ ЗАЯВОК</p>
+              <a href="tel:+79282706869" class="program-modal__phone-value">+7 (928) 270-68-69</a>
+              <p class="program-modal__phone-note">11:00–18:00 · понедельник — выходной</p>
+            </div>
+            <a href="tel:+79282706869" class="program-modal__call-btn" aria-label="Позвонить">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            </a>
+          </div>
+          <a href="#section-schedule" class="btn btn--cta program-modal__seats-btn" data-program-close>
+            <span>ВЫБРАТЬ МЕСТА</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tribune-modal" id="programModalSwim" aria-hidden="true">
+      <div class="tribune-modal__backdrop" data-program-close></div>
+      <div class="tribune-modal__panel program-modal__panel">
+        <div class="program-modal__photo">
+          <img src="media/swim.jpg" alt="Плавание с дельфинами в Ростовском дельфинарии" loading="lazy">
+          <button type="button" class="program-modal__close" data-program-close aria-label="Закрыть">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+        <div class="program-modal__body">
+          <p class="program-modal__label">15 МИНУТ В БАССЕЙНЕ</p>
+          <h4 class="program-modal__title">Плавание с дельфинами</h4>
+          <p class="program-modal__desc">Наш дельфинарий предлагает уникальную услугу — плавание с дельфинами. Приглашаем всех желающих сделать подарок себе и близким и получить незабываемые впечатления от купания вместе с прекрасными и дружелюбными животными. Общение в дельфинарии построено на взаимном интересе — вам хочется познакомиться с этими замечательными животными поближе, а они, как дети, любят ласку и игры.</p>
+          <div class="program-modal__phone">
+            <div>
+              <p class="program-modal__phone-label">ПЛАВАНИЕ С ДЕЛЬФИНАМИ</p>
+              <a href="tel:+79281257904" class="program-modal__phone-value">+7 (928) 125-79-04</a>
+              <p class="program-modal__phone-note">11:00–19:00 · понедельник — выходной</p>
+            </div>
+            <a href="tel:+79281257904" class="program-modal__call-btn" aria-label="Позвонить">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tribune-modal" id="programModalJunior" aria-hidden="true">
+      <div class="tribune-modal__backdrop" data-program-close></div>
+      <div class="tribune-modal__panel program-modal__panel">
+        <div class="program-modal__photo">
+          <img src="media/junior.jpg" alt="Программа «Юный натуралист» в Ростовском дельфинарии" loading="lazy">
+          <button type="button" class="program-modal__close" data-program-close aria-label="Закрыть">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+        <div class="program-modal__body">
+          <p class="program-modal__label">30–35 МИНУТ</p>
+          <h4 class="program-modal__title">«Юный натуралист»</h4>
+          <p class="program-modal__desc">Юные натуралисты узнают много интересного о дельфинах, их особенностях и образе жизни. Дети превратятся в настоящих тренеров: будут отдавать команды дельфинам, играть с ними в игрушки и, конечно, смогут сфотографироваться на память. С каждым ребёнком бесплатно допускается один взрослый сопровождающий.</p>
+          <div class="program-modal__phone">
+            <div>
+              <p class="program-modal__phone-label">ЗАПИСЬ К МАРИНЕ ЮРЬЕВНЕ</p>
+              <a href="tel:+79081828071" class="program-modal__phone-value">+7 (908) 182-80-71</a>
+              <p class="program-modal__phone-note">Отдельная запись на «Юного натуралиста»</p>
+            </div>
+            <a href="tel:+79081828071" class="program-modal__call-btn" aria-label="Позвонить">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="welfare" id="section-welfare" data-section data-index="05" data-sidebar="light" data-label="ЗАБОТА О ДЕЛЬФИНАХ">
+      <div class="welfare__head">
+        <p class="eyebrow-blue">ЗАБОТА О ЖИВОТНЫХ</p>
+        <h2 class="welfare__title">Забота о дельфинах</h2>
+        <p class="welfare__subtitle">Вопросы об условиях содержания — естественны и правильны. Вот на чём строится наша работа с дельфинами каждый день, а не только во время&nbsp;шоу.</p>
+      </div>
+
+      <div class="welfare-grid">
+        <div class="welfare-card">
+          <span class="welfare-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V6l-8-3Z"/><path d="M12 9v6M9 12h6"/></svg>
+          </span>
+          <h3 class="welfare-card__title">Ветеринарный контроль</h3>
+          <p class="welfare-card__text">Дельфины находятся под постоянным наблюдением ветеринарных специалистов: плановые осмотры, анализы и контроль самочувствия каждого животного.</p>
+        </div>
+
+        <div class="welfare-card">
+          <span class="welfare-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.35-9-8C1.2 8.7 2.7 5 6.2 5c2.1 0 3.9 1.3 5.8 3.6C13.9 6.3 15.7 5 17.8 5c3.5 0 5 3.7 3.2 7-2 3.65-9 8-9 8Z"/></svg>
+          </span>
+          <h3 class="welfare-card__title">Дрессировка без принуждения</h3>
+          <p class="welfare-card__text">Тренеры работают по методике положительного подкрепления — дельфины участвуют в программах добровольно, а не по&nbsp;принуждению.</p>
+        </div>
+
+        <div class="welfare-card">
+          <span class="welfare-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+          </span>
+          <h3 class="welfare-card__title">Отдых между шоу</h3>
+          <p class="welfare-card__text">Количество представлений в день ограничено, а между ними дельфины отдыхают — это защищает животных от&nbsp;переутомления.</p>
+        </div>
+
+        <div class="welfare-card">
+          <span class="welfare-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11Z"/></svg>
+          </span>
+          <h3 class="welfare-card__title">Качество воды</h3>
+          <p class="welfare-card__text">Вода в бассейне регулярно очищается и проверяется — фильтрация и химический состав контролируются&nbsp;ежедневно.</p>
+        </div>
+      </div>
+
+      <div class="welfare__foot">
+        <p>Остались вопросы об условиях содержания дельфинов? <strong>Мы открыты к диалогу</strong> — спросите&nbsp;напрямую.</p>
+        <a href="#section-contacts" class="welfare__foot-link">
+          <span>СВЯЗАТЬСЯ С НАМИ</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="gallery" id="section-gallery" data-section data-index="06" data-sidebar="light" data-label="ГАЛЕРЕЯ">
+
+      <div class="gallery__head">
+        <p class="eyebrow-blue">КАДРЫ ИЗ ДЕЛЬФИНАРИЯ</p>
+        <h2 class="gallery__title">Моменты, которые&nbsp;остаются</h2>
+        <p class="gallery__subtitle">Выступления, знакомство с животными и эмоции гостей — без одинаковых рамок и постановочных повторов.</p>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <button class="gallery-tile gt-duo" data-gallery-index="0">
+          <img src="media/duo.jpg" alt="Фотография Ростовского дельфинария" loading="lazy">
+          <span class="gallery-tile__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        </button>
+        <button class="gallery-tile gt-portrait" data-gallery-index="1">
+          <img src="media/portrait.jpg" alt="Фотография Ростовского дельфинария" loading="lazy">
+          <span class="gallery-tile__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        </button>
+        <button class="gallery-tile gt-junior" data-gallery-index="2">
+          <img src="media/junior.jpg" alt="Фотография Ростовского дельфинария" loading="lazy">
+          <span class="gallery-tile__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        </button>
+        <button class="gallery-tile gt-sealion" data-gallery-index="3">
+          <img src="media/sealion.jpg" alt="Фотография Ростовского дельфинария" loading="lazy">
+          <span class="gallery-tile__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        </button>
+        <button class="gallery-tile gt-show" data-gallery-index="4">
+          <img src="media/show.jpg" alt="Фотография Ростовского дельфинария" loading="lazy">
+          <span class="gallery-tile__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        </button>
+        <button class="gallery-tile gt-swim" data-gallery-index="5">
+          <img src="media/swim.jpg" alt="Фотография Ростовского дельфинария" loading="lazy">
+          <span class="gallery-tile__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        </button>
+      </div>
+
+      <button class="btn gallery__open" id="galleryOpenBtn">
+        <span>ОТКРЫТЬ ГАЛЕРЕЮ</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+      </button>
+    </section>
+
+    <section class="plan-visit" id="section-plan-visit" data-section data-index="07" data-sidebar="light" data-label="СПЛАНИРУЙТЕ ПОСЕЩЕНИЕ">
+
+      <div class="plan-visit__head">
+        <p class="eyebrow-blue">ВСЁ ДЛЯ СПОКОЙНОГО ВИЗИТА</p>
+        <h2 class="plan-visit__title">Спланируйте посещение</h2>
+        <p class="plan-visit__subtitle">Адрес, режим работы и полезные детали — собрали всё, что стоит проверить перед поездкой.</p>
+      </div>
+
+      <div class="plan-visit__grid">
+        <div class="pv-col">
+          <a class="pv-address" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener">
+            <p class="pv-address__label">АДРЕС</p>
+            <h3 class="pv-address__title">Ростов-на-Дону, <br class="pv-address__break">Коммунистический просп.,&nbsp;36/4</h3>
+            <p class="pv-address__sub">Парк «Сказка»</p>
+            <span class="pv-address__go">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </a>
+
+          <div class="pv-mini-row">
+            <div class="pv-mini">
+              <p class="pv-mini__label">КАССА</p>
+              <p class="pv-mini__value">11:00–18:00</p>
+              <p class="pv-mini__note">Понедельник — выходной</p>
+            </div>
+            <div class="pv-mini pv-mini--accent">
+              <p class="pv-mini__label">ПЛАВАНИЕ</p>
+              <p class="pv-mini__value">11:00–19:00</p>
+              <p class="pv-mini__note">Понедельник — выходной</p>
+            </div>
+          </div>
+
+          <div class="pv-note">
+            <p class="pv-note__label">ПЕРЕД ВИЗИТОМ</p>
+            <p class="pv-note__text">Приезжайте заранее и проверьте актуальное время выбранной программы.</p>
+          </div>
+        </div>
+
+        <a class="pv-map" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener" aria-label="Открыть карту">
+          <svg class="pv-map__roads" viewBox="0 0 620 520" fill="none" preserveAspectRatio="xMidYMid slice">
+            <path d="M60 0 C90 90 20 150 60 230 S140 340 110 520" stroke="currentColor" stroke-width="2"/>
+            <path d="M320 0 C300 70 360 130 320 220 S260 340 300 520" stroke="currentColor" stroke-width="2"/>
+            <path d="M0 90 C110 60 180 120 280 95 S480 60 620 110" stroke="currentColor" stroke-width="2"/>
+            <path d="M0 210 C120 190 200 230 310 205 S470 175 620 215" stroke="currentColor" stroke-width="2"/>
+            <path d="M540 0 C520 90 580 150 540 240 S470 350 520 520" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          <span class="pv-map__pin-dot" aria-hidden="true"></span>
+          <svg class="pv-map__pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/></svg>
+          <span class="pv-map__caption">Схема расположения</span>
+          <span class="pv-map__label">Парк «Сказка»</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="faq" id="section-faq" data-section data-index="08" data-sidebar="dark" data-label="ЧАСТЫЕ ВОПРОСЫ">
+      <div class="faq__blob" aria-hidden="true"></div>
+      <p class="eyebrow-cyan">ОТВЕЧАЕМ КОРОТКО И ПО ДЕЛУ</p>
+      <h2 class="faq__title">Частые вопросы</h2>
+      <p class="faq__subtitle">Билеты, дети, продолжительность шоу, запись на программы и правила визита.</p>
+
+      <div class="faq__grid">
+        <div class="faq-cta">
+          <p class="faq-cta__label">НЕ НАШЛИ ОТВЕТ?</p>
+          <p class="faq-cta__title">Позвоните — поможем подготовиться к визиту</p>
+          <a class="faq-cta__phone" href="tel:+79282706869">+7 (928) 270-68-69</a>
+        </div>
+
+        <div class="faq-list" id="faqList">
+          <div class="faq-item" data-default-open>
+            <button class="faq-item__q">
+              <span>Сколько длится представление?</span>
+              <span class="faq-item__icon">
+                <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                <svg class="icon-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__a">
+              <p class="faq-item__a-inner">Представление длится примерно 45 минут. Приезжайте за 15 минут до начала.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q">
+              <span>Нужен ли билет ребёнку до трёх&nbsp;лет?</span>
+              <span class="faq-item__icon">
+                <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                <svg class="icon-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__a">
+              <p class="faq-item__a-inner">Нет, дети до 3 лет проходят бесплатно и без отдельного места. Билет нужен с 3 лет.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q">
+              <span>Как купить билет?</span>
+              <span class="faq-item__icon">
+                <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                <svg class="icon-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__a">
+              <p class="faq-item__a-inner">Выберите дату и время в разделе «Расписание», отметьте места на схеме зала и оформите заказ онлайн.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q">
+              <span>Можно ли вернуть билет?</span>
+              <span class="faq-item__icon">
+                <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                <svg class="icon-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__a">
+              <p class="faq-item__a-inner">Да, не позднее чем за 24 часа до начала представления. Обратитесь в кассу по телефону или на месте.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q">
+              <span>Нужна ли предварительная запись на плавание?</span>
+              <span class="faq-item__icon">
+                <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                <svg class="icon-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__a">
+              <p class="faq-item__a-inner">Да, мест немного — рекомендуем записываться заранее по телефону или через раздел «Расписание».</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q">
+              <span>Что взять с собой на плавание?</span>
+              <span class="faq-item__icon">
+                <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                <svg class="icon-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__a">
+              <p class="faq-item__a-inner">Купальник или плавки, полотенце и сменную одежду. Гидрокостюмы и жилеты выдаются на месте.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts" id="section-contacts" data-section data-index="09" data-sidebar="light" data-label="КОНТАКТЫ">
+      <p class="eyebrow-blue">ОСТАЛИСЬ ВОПРОСЫ?</p>
+      <h2 class="contacts__title">Свяжитесь с нами</h2>
+      <p class="contacts__subtitle">Подскажем по билетам, расписанию и записи на дополнительные программы.</p>
+
+      <div class="contacts__grid">
+        <div class="contacts__col">
+          <a class="cx-card" href="tel:+79282706869">
+            <p class="cx-card__label">КАССА И ГРУППОВЫЕ ЗАЯВКИ</p>
+            <p class="cx-card__value">+7 (928) 270-68-69</p>
+            <p class="cx-card__note">11:00–18:00 · понедельник — выходной</p>
+            <span class="cx-card__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </a>
+          <a class="cx-card cx-card--light" href="tel:+79281257904">
+            <p class="cx-card__label">ПЛАВАНИЕ С ДЕЛЬФИНАМИ</p>
+            <p class="cx-card__value">+7 (928) 125-79-04</p>
+            <p class="cx-card__note">11:00–19:00 · понедельник — выходной</p>
+          </a>
+          <div class="cx-card cx-card--address">
+            <p class="cx-card__label">НАШ АДРЕС</p>
+            <p class="cx-card__value">Ростов-на-Дону, Коммунистический просп.,&nbsp;36/4</p>
+            <a class="cx-card__routelink" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener">
+              <span>Проложить маршрут</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <a class="cx-map" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener" aria-label="Открыть карту">
+          <svg class="pv-map__roads" viewBox="0 0 620 520" fill="none" preserveAspectRatio="xMidYMid slice">
+            <path d="M60 0 C90 90 20 150 60 230 S140 340 110 520" stroke="currentColor" stroke-width="2"/>
+            <path d="M320 0 C300 70 360 130 320 220 S260 340 300 520" stroke="currentColor" stroke-width="2"/>
+            <path d="M0 90 C110 60 180 120 280 95 S480 60 620 110" stroke="currentColor" stroke-width="2"/>
+            <path d="M0 210 C120 190 200 230 310 205 S470 175 620 215" stroke="currentColor" stroke-width="2"/>
+            <path d="M540 0 C520 90 580 150 540 240 S470 350 520 520" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          <span class="pv-map__pin-dot" aria-hidden="true"></span>
+          <svg class="pv-map__pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/></svg>
+          <span class="pv-map__label">Парк «Сказка»</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="site-footer__top">
+      <a href="#/" class="site-footer__logo">
+        <span class="logo-icon">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22.5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M9.5 28.4c7.8-10.7 17.7-14.9 29-12.5-4.7.6-8.7 2.4-12 5.4 5.1-.6 9.1.7 12 4-7.3-2.1-13.7-1.2-19.1 2.6-3.3 2.4-6.6 2.5-9.9.5Z" fill="currentColor"/>
+            <path d="M24.8 20.8c-.4 4.9-2.3 8.7-5.7 11.5 1.1-4.2.7-7.9-1.4-11.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-text__top">РОСТОВСКИЙ</span>
+          <span class="logo-text__bottom">ДЕЛЬФИНАРИЙ</span>
+        </span>
+      </a>
+
+      <div>
+        <p class="site-footer__label">ПОСЕТИТЕЛЯМ</p>
+        <ul class="site-footer__links">
+          <li><a href="#section-schedule">Расписание и билеты</a></li>
+          <li><a href="#section-conditions">Условия посещения</a></li>
+          <li><a href="#section-welfare">Забота о дельфинах</a></li>
+          <li><a href="#section-faq">Частые вопросы</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="site-footer__label">ПРОГРАММЫ</p>
+        <ul class="site-footer__links">
+          <li><a href="#section-schedule">Представление</a></li>
+          <li><a href="#section-schedule">Плавание с дельфинами</a></li>
+          <li><a href="#section-schedule">Юный натуралист</a></li>
+          <li><a href="#section-programs">Подарочный сертификат</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="site-footer__label">КОНТАКТЫ</p>
+        <a class="site-footer__phone" href="tel:+79282706869">+7 (928) 270-68-69</a>
+        <p class="site-footer__addr">Ростов-на-Дону,<br>Коммунистический просп., 36/4</p>
+      </div>
+    </div>
+
+    <div class="site-footer__divider"></div>
+
+    <div class="site-footer__bottom">
+      <div class="site-footer__meta">
+        <div class="site-footer__meta-row">
+          <span>© 2014–2026 Ростовский дельфинарий</span>
+          <button type="button" data-cta>Политика обработки персональных данных</button>
+          <button type="button" data-cta>Служебные страницы</button>
+        </div>
+        <p class="site-footer__yearround">Сайт работает круглый год</p>
+      </div>
+      <button class="site-footer__totop" id="footerToTop" aria-label="Наверх страницы">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m-6 6 6-6 6 6"/></svg>
+      </button>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox__figure">
+      <img id="lightboxImg" src="" alt="Фотография Ростовского дельфинария">
+      <button class="lightbox__nav lightbox__prev" id="lightboxPrev" aria-label="Предыдущее фото">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg>
+      </button>
+      <button class="lightbox__nav lightbox__next" id="lightboxNext" aria-label="Следующее фото">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+      </button>
+      <button class="lightbox__fullscreen" id="lightboxFullscreen" aria-label="На весь экран">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H3v5m13-5h5v5M8 21H3v-5m13 5h5v-5"/></svg>
+      </button>
+      <button class="lightbox__close" id="lightboxClose" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <span class="lightbox__counter" id="lightboxCounter">1 / 6</span>
+    </div>
+  </div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
