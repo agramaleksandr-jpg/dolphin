@@ -47,9 +47,8 @@
 
     <nav class="nav" id="primaryNav">
       <a href="#section-schedule" class="nav__link">АФИША И БИЛЕТЫ</a>
-      <a href="#show" class="nav__link">ШОУ</a>
       <a href="#section-programs" class="nav__link">ПРОГРАММЫ</a>
-      <a href="#artists" class="nav__link">АРТИСТЫ</a>
+      <a href="#section-welfare" class="nav__link">ЗАБОТА О ДЕЛЬФИНАХ</a>
       <a href="#section-plan-visit" class="nav__link">ПОСЕТИТЕЛЯМ</a>
       <a href="#section-contacts" class="nav__link">КОНТАКТЫ</a>
     </nav>
@@ -75,9 +74,8 @@
     </div>
     <nav class="menu-overlay__nav">
       <a href="#section-schedule" class="menu-link">АФИША И БИЛЕТЫ</a>
-      <a href="#show" class="menu-link">ШОУ</a>
       <a href="#section-programs" class="menu-link">ПРОГРАММЫ</a>
-      <a href="#artists" class="menu-link">АРТИСТЫ</a>
+      <a href="#section-welfare" class="menu-link">ЗАБОТА О ДЕЛЬФИНАХ</a>
       <a href="#section-plan-visit" class="menu-link">ПОСЕТИТЕЛЯМ</a>
       <a href="#section-contacts" class="menu-link">КОНТАКТЫ</a>
     </nav>
@@ -118,9 +116,8 @@
           <nav class="mega-menu__nav">
             <p class="mega-menu__label">МЕНЮ</p>
             <a href="#section-schedule">Афиша и билеты</a>
-            <a href="#show">Шоу</a>
             <a href="#section-programs">Программы</a>
-            <a href="#artists">Артисты</a>
+            <a href="#section-welfare">Забота о дельфинах</a>
             <a href="#section-plan-visit">Посетителям</a>
             <a href="#section-contacts">Контакты</a>
           </nav>
@@ -137,24 +134,15 @@
               <span class="mega-menu__phone-value">+7 (928) 125-79-04</span>
               <span class="mega-menu__phone-note">11:00–19:00 · понедельник — выходной</span>
             </a>
-            <a class="mega-menu__address-link" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener">
+            <a class="mega-menu__address-link" href="https://yandex.ru/maps/org/delfinariy/1146262286/" target="_blank" rel="noopener">
               <span>Ростов-на-Дону, Коммунистический просп., 36/4</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
             </a>
           </div>
 
-          <a class="mega-menu__map" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener" aria-label="Открыть карту">
-            <svg class="pv-map__roads" viewBox="0 0 620 520" fill="none" preserveAspectRatio="xMidYMid slice">
-            <path d="M60 0 C90 90 20 150 60 230 S140 340 110 520" stroke="currentColor" stroke-width="2"/>
-            <path d="M320 0 C300 70 360 130 320 220 S260 340 300 520" stroke="currentColor" stroke-width="2"/>
-            <path d="M0 90 C110 60 180 120 280 95 S480 60 620 110" stroke="currentColor" stroke-width="2"/>
-            <path d="M0 210 C120 190 200 230 310 205 S470 175 620 215" stroke="currentColor" stroke-width="2"/>
-            <path d="M540 0 C520 90 580 150 540 240 S470 350 520 520" stroke="currentColor" stroke-width="2"/>
-          </svg>
-          <span class="pv-map__pin-dot" aria-hidden="true"></span>
-          <svg class="pv-map__pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/></svg>
-          <span class="pv-map__label">Парк «Сказка»</span>
-        </a>
+          <div class="mega-menu__map">
+            <iframe class="pv-map__frame" data-src="https://yandex.ru/map-widget/v1/?ll=39.626272%2C47.208629&amp;z=16&amp;pt=39.626272%2C47.208629%2Cpm2ylm&amp;lang=ru_RU" title="Карта: Ростовский дельфинарий, Коммунистический просп., 36/4" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
       </div>
       </div>
     </div>
@@ -181,13 +169,13 @@
             <span class="schedule-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5.5" width="16" height="14.5" rx="2.5"/><path d="M4 10.2h16"/><path d="M8 3.5v3.4M16 3.5v3.4"/></svg>
             </span>
-            <span>СМОТРЕТЬ РАСПИСАНИЕ</span>
+            <span><span class="hide-xs">СМОТРЕТЬ </span>РАСПИСАНИЕ</span>
           </button>
-          <a class="btn btn--ghost" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener">
+          <a class="btn btn--ghost" href="https://yandex.ru/maps/?rtext=~47.208629%2C39.626272&amp;rtt=auto" target="_blank" rel="noopener">
             <span class="schedule-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="19" r="2"/><circle cx="19" cy="5" r="2"/><path d="M7 17.5C10 14 8 10 12 9s2-5 5-4" stroke-dasharray="2.4 2.4"/></svg>
             </span>
-            <span>ПРОЛОЖИТЬ МАРШРУТ</span>
+            <span><span class="hide-xs">ПРОЛОЖИТЬ </span>МАРШРУТ</span>
           </a>
         </div>
       </div>
@@ -215,86 +203,6 @@
 
       <div class="date-row">
         <div class="date-tabs" id="dateTabs">
-          <button class="date-tab is-active" data-date data-day="8 августа" data-time="СБ · 12:00">
-            <span class="date-tab__label">БЛИЖАЙШЕЕ</span>
-            <span class="date-tab__date">8 августа</span>
-            <span class="date-tab__time">СБ · 12:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="8 августа" data-time="18:00">
-            <span class="date-tab__label">СУББОТА</span>
-            <span class="date-tab__date">8 августа</span>
-            <span class="date-tab__time">18:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="9 августа" data-time="12:00">
-            <span class="date-tab__label">ВОСКРЕСЕНЬЕ</span>
-            <span class="date-tab__date">9 августа</span>
-            <span class="date-tab__time">12:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="9 августа" data-time="16:00">
-            <span class="date-tab__label">ВОСКРЕСЕНЬЕ</span>
-            <span class="date-tab__date">9 августа</span>
-            <span class="date-tab__time">16:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="11 августа" data-time="12:00">
-            <span class="date-tab__label">ВТОРНИК</span>
-            <span class="date-tab__date">11 августа</span>
-            <span class="date-tab__time">12:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="12 августа" data-time="12:00">
-            <span class="date-tab__label">СРЕДА</span>
-            <span class="date-tab__date">12 августа</span>
-            <span class="date-tab__time">12:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="13 августа" data-time="12:00">
-            <span class="date-tab__label">ЧЕТВЕРГ</span>
-            <span class="date-tab__date">13 августа</span>
-            <span class="date-tab__time">12:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="14 августа" data-time="12:00">
-            <span class="date-tab__label">ПЯТНИЦА</span>
-            <span class="date-tab__date">14 августа</span>
-            <span class="date-tab__time">12:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="15 августа" data-time="12:00">
-            <span class="date-tab__label">СУББОТА</span>
-            <span class="date-tab__date">15 августа</span>
-            <span class="date-tab__time">12:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="15 августа" data-time="18:00">
-            <span class="date-tab__label">СУББОТА</span>
-            <span class="date-tab__date">15 августа</span>
-            <span class="date-tab__time">18:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="16 августа" data-time="12:00">
-            <span class="date-tab__label">ВОСКРЕСЕНЬЕ</span>
-            <span class="date-tab__date">16 августа</span>
-            <span class="date-tab__time">12:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="16 августа" data-time="16:00">
-            <span class="date-tab__label">ВОСКРЕСЕНЬЕ</span>
-            <span class="date-tab__date">16 августа</span>
-            <span class="date-tab__time">16:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="18 августа" data-time="12:00">
-            <span class="date-tab__label">ВТОРНИК</span>
-            <span class="date-tab__date">18 августа</span>
-            <span class="date-tab__time">12:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="19 августа" data-time="12:00">
-            <span class="date-tab__label">СРЕДА</span>
-            <span class="date-tab__date">19 августа</span>
-            <span class="date-tab__time">12:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="20 августа" data-time="12:00">
-            <span class="date-tab__label">ЧЕТВЕРГ</span>
-            <span class="date-tab__date">20 августа</span>
-            <span class="date-tab__time">12:00</span>
-          </button>
-          <button class="date-tab" data-date data-day="21 августа" data-time="12:00">
-            <span class="date-tab__label">ПЯТНИЦА</span>
-            <span class="date-tab__date">21 августа</span>
-            <span class="date-tab__time">12:00</span>
-          </button>
         </div>
         <button class="date-next" id="dateNext" aria-label="Другие даты">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
@@ -473,7 +381,7 @@
 
         <aside class="order-card">
           <p class="order-card__label">ВАШ ЗАКАЗ</p>
-          <h3 class="order-card__datetime" id="orderDatetime">8 августа · 12:00</h3>
+          <h3 class="order-card__datetime" id="orderDatetime">&nbsp;</h3>
           <div class="order-card__divider"></div>
           <div class="order-card__row">
             <p class="order-card__field-label">Представление</p>
@@ -520,7 +428,7 @@
       <div class="conditions__head">
         <p class="eyebrow-blue">ПЕРЕД ВИЗИТОМ</p>
         <h2 class="conditions__title">Условия посещения</h2>
-        <p class="conditions__subtitle">Выберите программу — для каждой действуют свои правила, возрастные ограничения, продолжительность и стоимость.</p>
+        <p class="conditions__subtitle">Выберите программу — для каждой действуют свои правила, возрастные ограничения, продолжительность и&nbsp;стоимость.</p>
       </div>
 
       <div class="cond-tabs" id="condTabs" role="tablist">
@@ -552,7 +460,7 @@
             <div class="cond-field">
               <p class="cond-field__label">ПРОДОЛЖИТЕЛЬНОСТЬ</p>
               <p class="cond-field__value">≈ 45 минут</p>
-              <p class="cond-field__note">Приезжайте за 15 минут до начала программы.</p>
+              <p class="cond-field__note">Приезжайте за 15 минут до начала&nbsp;программы.</p>
             </div>
             <div class="cond-field">
               <p class="cond-field__label">ДЕТИ ДО 3 ЛЕТ</p>
@@ -572,7 +480,7 @@
           <div>
             <p class="cond-main__label">ЮНЫЙ НАТУРАЛИСТ</p>
             <h3 class="cond-main__title">«Юный натуралист»</h3>
-            <p class="cond-main__desc">Экскурсия за кулисы: дети узнают, как ухаживают за дельфинами, и знакомятся с ними у бортика бассейна.</p>
+            <p class="cond-main__desc">Экскурсия за кулисы: дети узнают, как ухаживают за дельфинами, и знакомятся с ними у бортика&nbsp;бассейна.</p>
           </div>
           <div class="cond-col">
             <div class="cond-field">
@@ -590,7 +498,7 @@
             <div class="cond-field">
               <p class="cond-field__label">ПРОДОЛЖИТЕЛЬНОСТЬ</p>
               <p class="cond-field__value">≈ 30–35 минут</p>
-              <p class="cond-field__note">Приезжайте за 10 минут до начала программы.</p>
+              <p class="cond-field__note">Приезжайте за 10 минут до начала&nbsp;программы.</p>
             </div>
             <div class="cond-field">
               <p class="cond-field__label">ВОЗРАСТ УЧАСТНИКОВ</p>
@@ -610,7 +518,7 @@
           <div>
             <p class="cond-main__label">ПЛАВАНИЕ С ДЕЛЬФИНАМИ</p>
             <h3 class="cond-main__title">Плавание с&nbsp;дельфинами</h3>
-            <p class="cond-main__desc">Инструктор сопровождает в воде: можно поплавать рядом с дельфином и сделать фото на память.</p>
+            <p class="cond-main__desc">Инструктор сопровождает в воде: можно поплавать рядом с дельфином и сделать фото на&nbsp;память.</p>
           </div>
           <div class="cond-col">
             <div class="cond-field">
@@ -628,7 +536,7 @@
             <div class="cond-field">
               <p class="cond-field__label">ПРОДОЛЖИТЕЛЬНОСТЬ</p>
               <p class="cond-field__value">≈ 15 минут</p>
-              <p class="cond-field__note">Приезжайте за 20 минут — переодевание и инструктаж.</p>
+              <p class="cond-field__note">Приезжайте за 20 минут — переодевание и&nbsp;инструктаж.</p>
             </div>
             <div class="cond-field">
               <p class="cond-field__label">ВОЗРАСТ УЧАСТНИКОВ</p>
@@ -678,7 +586,7 @@
             <span class="program-card__body">
               <span>
                 <span class="program-card__label">15 МИНУТ В БАССЕЙНЕ</span>
-                <span class="program-card__title">Плавание с дельфинами</span>
+                <span class="program-card__title">Плавание с&nbsp;дельфинами</span>
               </span>
               <span class="program-card__corner">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -814,42 +722,52 @@
         <p class="welfare__subtitle">Вопросы об условиях содержания — естественны и правильны. Вот на чём строится наша работа с дельфинами каждый день, а не только во время&nbsp;шоу.</p>
       </div>
 
-      <div class="welfare-grid">
-        <div class="welfare-card">
-          <span class="welfare-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V6l-8-3Z"/><path d="M12 9v6M9 12h6"/></svg>
-          </span>
-          <h3 class="welfare-card__title">Ветеринарный контроль</h3>
-          <p class="welfare-card__text">Дельфины находятся под постоянным наблюдением ветеринарных специалистов: плановые осмотры, анализы и контроль самочувствия каждого животного.</p>
-        </div>
-
-        <div class="welfare-card">
-          <span class="welfare-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.35-9-8C1.2 8.7 2.7 5 6.2 5c2.1 0 3.9 1.3 5.8 3.6C13.9 6.3 15.7 5 17.8 5c3.5 0 5 3.7 3.2 7-2 3.65-9 8-9 8Z"/></svg>
-          </span>
-          <h3 class="welfare-card__title">Дрессировка без принуждения</h3>
-          <p class="welfare-card__text">Тренеры работают по методике положительного подкрепления — дельфины участвуют в программах добровольно, а не по&nbsp;принуждению.</p>
-        </div>
-
-        <div class="welfare-card">
-          <span class="welfare-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
-          </span>
-          <h3 class="welfare-card__title">Отдых между шоу</h3>
-          <p class="welfare-card__text">Количество представлений в день ограничено, а между ними дельфины отдыхают — это защищает животных от&nbsp;переутомления.</p>
-        </div>
-
-        <div class="welfare-card">
-          <span class="welfare-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11Z"/></svg>
-          </span>
-          <h3 class="welfare-card__title">Качество воды</h3>
-          <p class="welfare-card__text">Вода в бассейне регулярно очищается и проверяется — фильтрация и химический состав контролируются&nbsp;ежедневно.</p>
-        </div>
+      <div class="welfare-split">
+        <figure class="welfare-photo">
+          <img src="media/junior.jpg" alt="Тренер и ребёнок знакомятся с дельфином у бортика бассейна" loading="lazy">
+        </figure>
+        <ul class="welfare-list">
+          <li class="welfare-item">
+            <span class="welfare-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V6l-8-3Z"/><path d="M12 9v6M9 12h6"/></svg>
+            </span>
+            <div>
+              <h3 class="welfare-item__title">Ветеринарный контроль</h3>
+              <p class="welfare-item__text">Плановые осмотры, анализы и наблюдение за самочувствием каждого&nbsp;дельфина.</p>
+            </div>
+          </li>
+          <li class="welfare-item">
+            <span class="welfare-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.35-9-8C1.2 8.7 2.7 5 6.2 5c2.1 0 3.9 1.3 5.8 3.6C13.9 6.3 15.7 5 17.8 5c3.5 0 5 3.7 3.2 7-2 3.65-9 8-9 8Z"/></svg>
+            </span>
+            <div>
+              <h3 class="welfare-item__title">Дрессировка без&nbsp;принуждения</h3>
+              <p class="welfare-item__text">Положительное подкрепление: дельфины участвуют в программах&nbsp;добровольно.</p>
+            </div>
+          </li>
+          <li class="welfare-item">
+            <span class="welfare-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+            </span>
+            <div>
+              <h3 class="welfare-item__title">Отдых между шоу</h3>
+              <p class="welfare-item__text">Число представлений в день ограничено, между ними дельфины&nbsp;отдыхают.</p>
+            </div>
+          </li>
+          <li class="welfare-item">
+            <span class="welfare-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11Z"/></svg>
+            </span>
+            <div>
+              <h3 class="welfare-item__title">Качество воды</h3>
+              <p class="welfare-item__text">Фильтрация и химический состав воды контролируются&nbsp;ежедневно.</p>
+            </div>
+          </li>
+        </ul>
       </div>
 
       <div class="welfare__foot">
-        <p>Остались вопросы об условиях содержания дельфинов? <strong>Мы открыты к диалогу</strong> — спросите&nbsp;напрямую.</p>
+        <p>Остались вопросы об условиях содержания дельфинов? <strong>Мы&nbsp;открыты к&nbsp;диалогу</strong> — спросите&nbsp;напрямую.</p>
         <a href="#section-contacts" class="welfare__foot-link">
           <span>СВЯЗАТЬСЯ С НАМИ</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
@@ -903,12 +821,12 @@
       <div class="plan-visit__head">
         <p class="eyebrow-blue">ВСЁ ДЛЯ СПОКОЙНОГО ВИЗИТА</p>
         <h2 class="plan-visit__title">Спланируйте посещение</h2>
-        <p class="plan-visit__subtitle">Адрес, режим работы и полезные детали — собрали всё, что стоит проверить перед поездкой.</p>
+        <p class="plan-visit__subtitle">Адрес, режим работы и полезные детали — собрали всё, что стоит проверить перед&nbsp;поездкой.</p>
       </div>
 
       <div class="plan-visit__grid">
         <div class="pv-col">
-          <a class="pv-address" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener">
+          <a class="pv-address" href="https://yandex.ru/maps/org/delfinariy/1146262286/" target="_blank" rel="noopener">
             <p class="pv-address__label">АДРЕС</p>
             <h3 class="pv-address__title">Ростов-на-Дону, <br class="pv-address__break">Коммунистический просп.,&nbsp;36/4</h3>
             <p class="pv-address__sub">Парк «Сказка»</p>
@@ -932,23 +850,19 @@
 
           <div class="pv-note">
             <p class="pv-note__label">ПЕРЕД ВИЗИТОМ</p>
-            <p class="pv-note__text">Приезжайте заранее и проверьте актуальное время выбранной программы.</p>
+            <p class="pv-note__text">Приезжайте заранее и проверьте актуальное время выбранной&nbsp;программы.</p>
           </div>
         </div>
 
-        <a class="pv-map" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener" aria-label="Открыть карту">
-          <svg class="pv-map__roads" viewBox="0 0 620 520" fill="none" preserveAspectRatio="xMidYMid slice">
+        <div class="pv-map">
+          <svg class="pv-map__roads" viewBox="0 0 620 520" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <path d="M60 0 C90 90 20 150 60 230 S140 340 110 520" stroke="currentColor" stroke-width="2"/>
             <path d="M320 0 C300 70 360 130 320 220 S260 340 300 520" stroke="currentColor" stroke-width="2"/>
             <path d="M0 90 C110 60 180 120 280 95 S480 60 620 110" stroke="currentColor" stroke-width="2"/>
             <path d="M0 210 C120 190 200 230 310 205 S470 175 620 215" stroke="currentColor" stroke-width="2"/>
-            <path d="M540 0 C520 90 580 150 540 240 S470 350 520 520" stroke="currentColor" stroke-width="2"/>
           </svg>
-          <span class="pv-map__pin-dot" aria-hidden="true"></span>
-          <svg class="pv-map__pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/></svg>
-          <span class="pv-map__caption">Схема расположения</span>
-          <span class="pv-map__label">Парк «Сказка»</span>
-        </a>
+          <iframe class="pv-map__frame" src="https://yandex.ru/map-widget/v1/?ll=39.626272%2C47.208629&amp;z=16&amp;pt=39.626272%2C47.208629%2Cpm2ylm&amp;lang=ru_RU" title="Карта: Ростовский дельфинарий, Коммунистический просп., 36/4" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
 
@@ -988,7 +902,7 @@
               </span>
             </button>
             <div class="faq-item__a">
-              <p class="faq-item__a-inner">Нет, дети до 3 лет проходят бесплатно и без отдельного места. Билет нужен с 3 лет.</p>
+              <p class="faq-item__a-inner">Нет, дети до 3 лет проходят бесплатно и без отдельного места. Билет нужен с&nbsp;3&nbsp;лет.</p>
             </div>
           </div>
 
@@ -1068,25 +982,13 @@
           <div class="cx-card cx-card--address">
             <p class="cx-card__label">НАШ АДРЕС</p>
             <p class="cx-card__value">Ростов-на-Дону, Коммунистический просп.,&nbsp;36/4</p>
-            <a class="cx-card__routelink" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener">
+            <a class="cx-card__routelink" href="https://yandex.ru/maps/?rtext=~47.208629%2C39.626272&amp;rtt=auto" target="_blank" rel="noopener">
               <span>Проложить маршрут</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
             </a>
           </div>
         </div>
 
-        <a class="cx-map" href="https://yandex.ru/maps/?text=Ростов-на-Дону%2C%20Коммунистический%20просп.%2C%2036%2F4%20Парк%20Сказка" target="_blank" rel="noopener" aria-label="Открыть карту">
-          <svg class="pv-map__roads" viewBox="0 0 620 520" fill="none" preserveAspectRatio="xMidYMid slice">
-            <path d="M60 0 C90 90 20 150 60 230 S140 340 110 520" stroke="currentColor" stroke-width="2"/>
-            <path d="M320 0 C300 70 360 130 320 220 S260 340 300 520" stroke="currentColor" stroke-width="2"/>
-            <path d="M0 90 C110 60 180 120 280 95 S480 60 620 110" stroke="currentColor" stroke-width="2"/>
-            <path d="M0 210 C120 190 200 230 310 205 S470 175 620 215" stroke="currentColor" stroke-width="2"/>
-            <path d="M540 0 C520 90 580 150 540 240 S470 350 520 520" stroke="currentColor" stroke-width="2"/>
-          </svg>
-          <span class="pv-map__pin-dot" aria-hidden="true"></span>
-          <svg class="pv-map__pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/></svg>
-          <span class="pv-map__label">Парк «Сказка»</span>
-        </a>
       </div>
     </section>
   </main>
@@ -1141,7 +1043,6 @@
         <div class="site-footer__meta-row">
           <span>© 2014–2026 Ростовский дельфинарий</span>
           <button type="button" data-cta>Политика обработки персональных данных</button>
-          <button type="button" data-cta>Служебные страницы</button>
         </div>
         <p class="site-footer__yearround">Сайт работает круглый год</p>
       </div>

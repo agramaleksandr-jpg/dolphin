@@ -36,6 +36,8 @@
     clearTimeout(megaMenuCloseTimer);
     megaMenu.setAttribute('aria-hidden','false');
     document.body.style.overflow = 'hidden';
+    var mapFrame = megaMenu.querySelector('iframe[data-src]');
+    if(mapFrame && !mapFrame.getAttribute('src')) mapFrame.setAttribute('src', mapFrame.getAttribute('data-src'));
     megaMenu.classList.add('is-expanding');
     megaMenuOpenTimer = setTimeout(function(){
       megaMenu.classList.add('is-content-visible');
@@ -541,7 +543,39 @@
 
   updateOrderSummary();
 
-  // date tabs
+  // date tabs: rolling schedule, 14 days from today (Mon = day off)
+  (function buildSchedule(){
+    var box = document.getElementById('dateTabs');
+    if(!box) return;
+    var MONTHS = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+    var DAYS = ['ВОСКРЕСЕНЬЕ','ПОНЕДЕЛЬНИК','ВТОРНИК','СРЕДА','ЧЕТВЕРГ','ПЯТНИЦА','СУББОТА'];
+    var SHORT = ['ВС','ПН','ВТ','СР','ЧТ','ПТ','СБ'];
+    var TIMES = {0:['12:00','16:00'],2:['12:00'],3:['12:00'],4:['12:00'],5:['12:00'],6:['12:00','18:00']};
+    var now = new Date(), html = '', first = true;
+    for(var i=0;i<14;i++){
+      var d = new Date(now.getFullYear(), now.getMonth(), now.getDate()+i);
+      var slots = TIMES[d.getDay()];
+      if(!slots) continue;
+      slots.forEach(function(t){
+        var hm = t.split(':');
+        var start = new Date(d.getFullYear(), d.getMonth(), d.getDate(), +hm[0], +hm[1]);
+        if(start <= now) return;
+        var day = d.getDate() + ' ' + MONTHS[d.getMonth()];
+        var label = first ? 'БЛИЖАЙШЕЕ' : DAYS[d.getDay()];
+        var time = first ? SHORT[d.getDay()] + ' · ' + t : t;
+        html += '<button class="date-tab' + (first ? ' is-active' : '') + '" data-date data-day="' + day + '" data-time="' + t + '">' +
+          '<span class="date-tab__label">' + label + '</span>' +
+          '<span class="date-tab__date">' + day + '</span>' +
+          '<span class="date-tab__time">' + time + '</span></button>';
+        if(first){
+          var dt0 = document.getElementById('orderDatetime');
+          if(dt0) dt0.textContent = day + ' · ' + t;
+        }
+        first = false;
+      });
+    }
+    box.innerHTML = html;
+  })();
   document.querySelectorAll('.date-tab').forEach(function(tab){
     tab.addEventListener('click', function(){
       document.querySelectorAll('.date-tab').forEach(function(t){ t.classList.remove('is-active'); });
